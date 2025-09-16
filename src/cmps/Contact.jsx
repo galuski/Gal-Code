@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-// import secret from "./../data/secret.json";
 import { useTranslation } from "react-i18next";
 import { Title } from "../cmps/Title";
 import { ToastAlert } from "../cmps/ToastAlert"; // ✅ ייבוא קומפוננטת אלרט
