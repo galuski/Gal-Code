@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import secret from "./../data/secret.json";
+// import secret from "./../data/secret.json";
 import { useTranslation } from "react-i18next";
 import { Title } from "../cmps/Title";
 import { ToastAlert } from "../cmps/ToastAlert"; // ✅ ייבוא קומפוננטת אלרט
@@ -8,6 +8,10 @@ import { ToastAlert } from "../cmps/ToastAlert"; // ✅ ייבוא קומפונ�
 export function Contact() {
   const form = useRef();
   const { t } = useTranslation();
+
+  const serviceId = import.meta.env.VITE_SERVICE_ID;
+  const templateId = import.meta.env.VITE_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
   const [errors, setErrors] = useState({});
   const [isTermsAccepted, setIsTermsAccepted] = useState(false);
@@ -71,8 +75,8 @@ export function Contact() {
     }
 
     emailjs
-      .sendForm(secret.service_id, secret.template_id, form.current, {
-        publicKey: secret.public_key,
+      .sendForm(serviceId, templateId, form.current, {
+        publicKey: publicKey,
       })
       .then(
         () => {
