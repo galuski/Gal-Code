@@ -1,0 +1,173 @@
+html.he .navbar {
+  direction: rtl;
+  text-align: right;
+  font-family: NotoSansHebrew;
+}
+
+html.en .navbar {
+  direction: ltr;
+  text-align: left;
+  font-family: Poppins;
+}
+
+html.es .navbar {
+  direction: ltr;
+  text-align: left;
+  font-family: Barlow;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  color: var(--clr1);
+  font-size: 1rem;
+  z-index: 50;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar ul li a:hover {
+  text-decoration-line: underline;
+}
+
+.navbar-logo {
+  width: 80px;
+  height: 80px;
+}
+
+.navbar-area-btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+button img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+button:hover {
+  color: var(--clr2);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown button {
+  color: var(--clr1);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu {
+  position: absolute;
+  color: var(--clr1);
+  background-color: var(--clr4);
+  z-index: 1;
+}
+
+.dropdown-option {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background-color: var(--clr2);
+}
+
+.flag-icon {
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  margin: 0;
+}
+
+/* סגנון כפתור המבורגר - יופיע רק במסכים קטנים */
+.navbar .menu {
+  display: none; /* מוסתר כברירת מחדל */
+}
+
+/* תפריט ניווט במסכים גדולים */
+@media (min-width: 960px) {
+  .navbar ul {
+    display: flex !important; /* תפריט מוצג תמיד במסכים גדולים */
+  }
+}
+
+/* תפריט ניווט במסכים קטנים */
+@media (max-width: 960px) {
+
+  .navbar .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  .bars {
+    width: 30px;
+    height: 4px;
+    background-color: var(--clr2);
+    border-radius: 4px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu.open #bar1 {
+    transform: rotate(45deg);
+    transform-origin: center;
+    width: 30px;
+    position: absolute;
+  }
+  
+  .menu.open #bar2 {
+    opacity: 0;
+  }
+  
+  .menu.open #bar3 {
+    transform: rotate(-45deg);
+    transform-origin: center;
+    width: 30px;
+    position: absolute;
+  }
+  
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar ul.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 85px;
+    width: 100%;
+    gap: 10px;
+    background-color: var(--clr2);
+    color: white;
+    z-index: 50;
+  }
+}

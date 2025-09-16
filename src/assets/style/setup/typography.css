@@ -1,0 +1,28 @@
+/*Navbar Fonts*/
+
+@font-face {
+    font-family: Poppins;
+    src: url(./../../fonts/poppins-en/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: PoppinsBold;
+    src: url(./../../fonts/poppins-en/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: NotoSansHebrew;
+    src: url(./../../fonts/notoSansHebrew/NotoSansHebrew-Regular.ttf);
+}
+@font-face {
+    font-family: NotoSansHebrewBold;
+    src: url(./../../fonts/notoSansHebrew/NotoSansHebrew-Bold.ttf);
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url(./../../fonts/barlow-es/Barlow-Regular.ttf);
+}
+@font-face {
+    font-family: BarlowBold;
+    src: url(./../../fonts/barlow-es/Barlow-Bold.ttf);
+}

@@ -1,0 +1,173 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  color: var(--clr4);
+  overflow: hidden; /* מונע גלילה לא רצויה */
+  margin-bottom: 50px;
+}
+
+.hero-area {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* טקסט ריספונסיבי */
+.hero-h1 {
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  /* margin-bottom: 0.5em;
+  background: linear-gradient(
+    to right,
+    var(--clr1),
+    var(--clr2),
+    var(--clr1),
+    var(--clr2),
+    var(--clr1)
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s linear infinite; */
+}
+
+.hero-h2 {
+  font-size: clamp(1.5rem, 3.5vw, 3rem);
+  margin-bottom: 0.3em;
+}
+
+.hero-h3 {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  margin-bottom: 1.2em;
+}
+
+/* כפתור */
+.super-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 28px;
+  margin-top: 20px;
+  background: linear-gradient(145deg, #0f0f0f, #1c1c1c);
+  border-radius: 100px;
+  color: var(--clr1);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  backdrop-filter: blur(8px);
+  z-index: 1;
+}
+
+.super-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, var(--clr1), var(--clr2), var(--clr1));
+  animation: rotate 4s linear infinite;
+  z-index: -2;
+}
+
+.super-button::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: var(--clr4);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.super-button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes animate-gradient {
+  to {
+    background-position: 200%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ריספונסיביות */
+@media (max-width: 960px) {
+  .hero-area {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-h1 {
+    font-size: clamp(2rem, 8vw, 4.5rem);
+  }
+
+  .hero-h2 {
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
+  }
+
+  .hero-h3 {
+    font-size: clamp(1rem, 4vw, 2rem);
+  }
+
+  .super-button {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}

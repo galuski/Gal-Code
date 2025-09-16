@@ -1,0 +1,65 @@
+{
+  "Home": "בית",
+  "About": "אודות",
+  "Projects": "פרויקטים",
+  "Contact me": "צור קשר",
+
+  "Gal-Code": "גל-קוד",
+  "Building websites using code": "בניית אתרים באמצעות קוד",
+  "Your vision – with no limits": "החזון שלך – ללא גבולות",
+
+  "Let’s get started": "בוא נתחיל",
+
+  "Hello, I’m Gal Luski,": "שלום, אני גל לוסקי,",
+  "academy": "בוגר תוכנית <1>Fullstack Developer</1> ב־<3>Coding Academy</3>, ובעל תואר ראשון ב־<5>כלכלה ומערכות מידע</5> מ־<7>מכללת תל־חי</7>.",
+  "why web": "נחשפתי לראשונה לתחום <1>פיתוח האתרים</1> לקראת סיום לימודי התואר הראשון. ההרגשה ששורת קוד אחת יכולה להציג משהו מוחשי על המסך חיברה אותי עמוקות ל־<1>פיתוח אתרים</1>, התחום שבחרתי להתמחות בו.",
+  "professional knowledge": "עם הידע המקצועי שלי, אני רוצה לבנות אתרים עם יסודות חזקים וארכיטקטורה נכונה, שמותאמים לטעם הייחודי של כל אחד.",
+  "difference": "ההבדל המרכזי בין אתר שאני מפתח מאפס עם <1>קוד נקי</1> לבין בוני האתרים <3>Off the Shelf</3> הוא שאתרים מבוססי קוד מספקים <5>ביצועי גלישה מהירים יותר</5>, מבנה אופטימלי עבור <7>קידום במנועי חיפוש</7>, ו־<9>חופש עיצוב מלא</9> בלי להיות מוגבלים לתבניות.",
+  "every business needs": "בעולם של היום, כל עסק צריך <1>נוכחות אונליין</1>, ולא רק ברשתות החברתיות. אני כאן כדי ללוות אותך צעד אחר צעד, עם מקצועיות וחיוך!",
+
+  "Everything your website needs": "הכל מה שאתר שלך צריך",
+
+  "services": {
+    "websites": {
+      "title": "אתרים",
+      "description": "מדף נחיתה פשוט ועד חנות אונליין מלאה, מותאם לצרכים שלך."
+    },
+    "design": {
+      "title": "עיצוב",
+      "description": "אתרים מותאמים אישית עם חווית משתמש ומיתוג ייחודי."
+    },
+    "accessibility": {
+      "title": "נגישות",
+      "description": "בנוי לפי תקני נגישות כדי שכולם יוכלו להשתמש באתר בנוחות."
+    },
+    "multilingual": {
+      "title": "רב לשוני",
+      "description": "הרחב את קהל היעד שלך עם אתרים זמינים במספר שפות."
+    },
+    "copywriting": {
+      "title": "קופירייטינג",
+      "description": "טקסטים ברורים ומרתקים שמדגישים את ערכי העסק שלך."
+    }
+  },
+
+  "Full name": "שם מלא",
+  "Email address": "כתובת אימייל",
+  "Phone number": "מספר טלפון",
+  "Your message": "ההודעה שלך",
+  "I have read and agree to the Terms and Conditions and Privacy Policy": "קראתי ואני מסכים לתנאים והגבלות ולמדיניות הפרטיות",
+  "Terms and Conditions & Privacy Policy": "תנאים והגבלות ומדיניות פרטיות",
+  "Send Message": "שלח הודעה",
+  "Name is required": "נדרש שם",
+  "Email is required": "נדרש אימייל",
+  "Phone number is required": "נדרש מספר טלפון",
+  "Message is required": "נדרשת הודעה",
+  "Invalid email address": "כתובת אימייל לא חוקית",
+  "Invalid phone number (use international format)": "מספר טלפון לא חוקי (יש להשתמש בפורמט בינלאומי)",
+  "You must accept the terms": "עליך לאשר את התנאים",
+  "You have reached the daily limit of 10 messages": "הגעת למגבלה היומית של 10 הודעות",
+  "Message sent successfully!": "ההודעה נשלחה בהצלחה!",
+  "Failed to send message. Please try again later.": "שליחת ההודעה נכשלה. נסה שוב מאוחר יותר.",
+
+    "Contact us": "צרו קשר"
+
+}

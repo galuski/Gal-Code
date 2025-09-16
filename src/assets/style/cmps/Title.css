@@ -1,0 +1,24 @@
+.title {
+  font-size: clamp(1.25rem, 4vw, 2.5rem);
+  margin-bottom: 10px;
+  text-align: start;
+  background: linear-gradient(
+    to right,
+    var(--clr1),
+    var(--clr2),
+    var(--clr1),
+    var(--clr2),
+    var(--clr1)
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s linear infinite;
+}
+
+@keyframes animate-gradient {
+  to {
+    background-position: 200%;
+  }
+}

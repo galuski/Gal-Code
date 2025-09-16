@@ -1,0 +1,20 @@
+input {
+  outline: none;
+  background-color: transparent;
+  width: 150px;
+}
+
+textarea {
+  background-color: transparent;
+}
+
+.textarea label {
+  background-color: transparent;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 16px;
+  cursor: pointer;
+}
+

@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html.en {
+  direction: ltr;
+  text-align: left;
+}
+
+html.es {
+  direction: ltr;
+  text-align: left;
+}
+
+html.he {
+  direction: rtl; /* סידור טקסט מימין לשמאל */
+  text-align: right;
+}
+
+body.en {
+  background: linear-gradient(90deg, hsl(147, 0%, 99%), hsl(147, 0%, 99%)),
+    /* רקע בסיס */
+      radial-gradient(
+        circle at 77% 66%,
+        hsla(39, 0%, 85%, 0.15) 0%,
+        transparent 43%
+      ),
+    radial-gradient(
+      circle at 6% 56%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 56%
+    ),
+    radial-gradient(
+      circle at 48% 45%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 85%
+    ),
+    radial-gradient(
+      circle at 89% 6%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 71% 38%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 21%
+    ),
+    radial-gradient(
+      circle at 84% 78%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 85%
+    ),
+    radial-gradient(
+      circle at 92% 72%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 51%
+    ),
+    radial-gradient(
+      circle at 73% 95%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 63%
+    ),
+    radial-gradient(
+      circle at 29% 29%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 73%
+    );
+  color: var(--clr1);
+  font-family: Lora;
+  overflow-x: hidden;
+}
+
+body.he {
+  background: linear-gradient(90deg, hsl(147, 0%, 99%), hsl(147, 0%, 99%)),
+    /* רקע בסיס */
+      radial-gradient(
+        circle at 77% 66%,
+        hsla(39, 0%, 85%, 0.15) 0%,
+        transparent 43%
+      ),
+    radial-gradient(
+      circle at 6% 56%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 56%
+    ),
+    radial-gradient(
+      circle at 48% 45%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 85%
+    ),
+    radial-gradient(
+      circle at 89% 6%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 71% 38%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 21%
+    ),
+    radial-gradient(
+      circle at 84% 78%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 85%
+    ),
+    radial-gradient(
+      circle at 92% 72%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 51%
+    ),
+    radial-gradient(
+      circle at 73% 95%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 63%
+    ),
+    radial-gradient(
+      circle at 29% 29%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 73%
+    );
+
+  color: var(--clr1);
+  font-family: NotoSansHebrew;
+  overflow-x: hidden;
+}
+
+body.es {
+  background: linear-gradient(90deg, hsl(147, 0%, 99%), hsl(147, 0%, 99%)),
+    /* רקע בסיס */
+      radial-gradient(
+        circle at 77% 66%,
+        hsla(39, 0%, 85%, 0.15) 0%,
+        transparent 43%
+      ),
+    radial-gradient(
+      circle at 6% 56%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 56%
+    ),
+    radial-gradient(
+      circle at 48% 45%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 85%
+    ),
+    radial-gradient(
+      circle at 89% 6%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 71% 38%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 21%
+    ),
+    radial-gradient(
+      circle at 84% 78%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 85%
+    ),
+    radial-gradient(
+      circle at 92% 72%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 51%
+    ),
+    radial-gradient(
+      circle at 73% 95%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 63%
+    ),
+    radial-gradient(
+      circle at 29% 29%,
+      hsla(39, 0%, 85%, 0.15) 0%,
+      transparent 73%
+    );
+
+  color: var(--clr1);
+  font-family: Barlow;
+  overflow-x: hidden;
+}
+
+h1.en,
+h2.en,
+h3.en,
+h4.en,
+h5.en,
+h6.en {
+  margin: 0.5em 0 0.5em;
+  font-family: CinzelB;
+}
+h1.he,
+h2.he,
+h3.he,
+h4.he,
+h5.he,
+h6.he {
+  margin: 0.5em 0 0.5em;
+  font-family: FrankRL;
+}
+
+p.en {
+  margin: 0 0 1em;
+  font-family: Lora;
+}
+p.he {
+  margin: 0 0 1em;
+  font-family: Assistant;
+}
+
+pre.en {
+  margin: 0 0 1em;
+  font-family: Lora;
+}
+pre.he {
+  margin: 0 0 1em;
+  font-family: Assistant;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Dont stretch my Media */
+img,
+embed,
+video,
+object {
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+
+button.en {
+  font-family: Poppins;
+}
+
+button.he {
+  font-family: NotoSansHebrew;
+}
+
+button.es {
+  font-family: Barlow;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
+
+select {
+  border: none;
+}
+
+a.active {
+  text-decoration: overline;
+}
+
+strong {
+  color: var(--clr1);
+}

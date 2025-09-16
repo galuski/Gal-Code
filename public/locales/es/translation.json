@@ -1,0 +1,65 @@
+{
+  "Home": "Inicio",
+  "About": "Acerca de",
+  "Projects": "Proyectos",
+  "Contact me": "Contáctame",
+
+  "Gal-Code": "Gal-Código",
+  "Building websites using code": "Creando sitios web con código",
+  "Your vision – with no limits": "Tu visión – sin límites",
+
+  "Let’s get started": "Empecemos",
+
+  "Hello, I’m Gal Luski,": "Hola, soy Gal Luski,",
+  "academy": "graduado del programa <1>Fullstack Developer</1> en <3>Coding Academy</3>, y también con una licenciatura en <5>Economía y Sistemas de Información</5> de <7>Colegio Tel-Hai</7>.",
+  "why web": "Me expuse por primera vez al campo del <1>desarrollo web</1> hacia el final de mis estudios universitarios. La sensación de que una sola línea de código podía mostrar algo tangible en la pantalla me hizo conectar profundamente con el <1>desarrollo web</1>, el campo que elegí para especializarme.",
+  "professional knowledge": "Con mi conocimiento profesional, quiero construir sitios web con una base sólida y una arquitectura adecuada, diseñados para reflejar el gusto único de cada persona.",
+  "difference": "La principal diferencia entre un sitio web que desarrollo desde cero con <1>código limpio</1> y los creadores de sitios <3>listos para usar</3> es que los sitios basados en código ofrecen <5>mayor rendimiento de navegación</5>, una estructura optimizada para el <7>posicionamiento en buscadores</7>, y <9>libertad de diseño total</9> sin estar limitados por plantillas.",
+  "every business needs": "En el mundo de hoy, todo negocio necesita una <1>presencia en línea</1>, no solo en redes sociales. ¡Estoy aquí para acompañarte paso a paso, con profesionalismo y una sonrisa!",
+
+  "Everything your website needs": "Todo lo que tu sitio web necesita",
+
+  "services": {
+    "websites": {
+      "title": "Sitios web",
+      "description": "Desde una simple landing page hasta una tienda online completa, adaptada a tus necesidades."
+    },
+    "design": {
+      "title": "Diseño",
+      "description": "Sitios web personalizados diseñados con experiencia de usuario y una marca única en mente."
+    },
+    "accessibility": {
+      "title": "Accesibilidad",
+      "description": "Construido de acuerdo con estándares de accesibilidad para que todos puedan usar tu sitio cómodamente."
+    },
+    "multilingual": {
+      "title": "Multilingüe",
+      "description": "Amplía tu audiencia con sitios web disponibles en varios idiomas."
+    },
+    "copywriting": {
+      "title": "Redacción",
+      "description": "Textos claros y atractivos que destacan los valores de tu negocio y comunican tu mensaje de manera efectiva."
+    }
+  },
+
+  "Full name": "Nombre completo",
+  "Email address": "Dirección de correo electrónico",
+  "Phone number": "Número de teléfono",
+  "Your message": "Tu mensaje",
+  "I have read and agree to the Terms and Conditions and Privacy Policy": "He leído y acepto los Términos y Condiciones y la Política de Privacidad",
+  "Terms and Conditions & Privacy Policy": "Términos y Condiciones y Política de Privacidad",
+  "Send Message": "Enviar mensaje",
+  "Name is required": "Se requiere nombre",
+  "Email is required": "Se requiere correo electrónico",
+  "Phone number is required": "Se requiere número de teléfono",
+  "Message is required": "Se requiere mensaje",
+  "Invalid email address": "Dirección de correo electrónico no válida",
+  "Invalid phone number (use international format)": "Número de teléfono no válido (use el formato internacional)",
+  "You must accept the terms": "Debes aceptar los términos",
+  "You have reached the daily limit of 10 messages": "Has alcanzado el límite diario de 10 mensajes",
+  "Message sent successfully!": "¡Mensaje enviado con éxito!",
+  "Failed to send message. Please try again later.": "No se pudo enviar el mensaje. Por favor, inténtalo de nuevo más tarde.",
+
+    "Contact us": "Contacta con nosotros"
+
+}

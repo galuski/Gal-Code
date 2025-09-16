@@ -1,0 +1,35 @@
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.about-txt {
+  max-width: 600px; /* לא לעבור על כל המסך */
+  padding-bottom: 20px;
+  line-height: 1.8; /* ריווח בין שורות */
+  font-size: 1.1.063rem;
+}
+
+.about-txt p {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 1000px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .about-title {
+    display: grid;
+    place-items: center;
+  }
+  .about-txt {
+    text-align: center;
+    line-height: 1.8; /* ריווח בין שורות */
+    font-size: 1.1.063rem;
+  }
+}

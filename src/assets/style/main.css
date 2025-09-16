@@ -1,0 +1,26 @@
+/* Setup */
+@import 'setup/vars.css';
+@import 'setup/typography.css';
+
+/* Base */
+@import 'base/base.css';
+@import 'base/helpers.css';
+@import 'base/layout.css';
+@import 'base/forms.css';
+
+/*Componetes*/
+@import 'cmps/Navbar.css';
+@import 'cmps/Hero.css';
+@import 'cmps/About.css';
+@import 'cmps/Name.css';
+@import 'cmps/Button.css';
+@import 'cmps/Video.scss';
+@import 'cmps/GooEffect.css';
+@import 'cmps/OfficeAnimation.css';
+@import 'cmps/Title.css';
+@import 'cmps/WorldMap.scss';
+@import 'cmps/Services.css';
+@import 'cmps/Card.css';
+@import 'cmps/Contact.css';
+@import 'cmps/ToastAlert.css';
+
