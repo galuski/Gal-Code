@@ -9,6 +9,7 @@ import GooEffect from './cmps/GooEffect'
 import { WorldMap } from './cmps/WorldMap'
 import { Services } from './cmps/Services'
 import { Contact } from './cmps/Contact'
+import { Skills } from './cmps/Skills'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <About />
       <Services />
       <Contact />
+      <Skills />
       {/* <WorldMap /> */}
     </section>
   )

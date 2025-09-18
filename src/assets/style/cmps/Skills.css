@@ -1,0 +1,9 @@
+.skills{
+    width: 100%;
+}
+.skills-cards-container {
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  gap: 10px;
+  justify-content: start;
+}
