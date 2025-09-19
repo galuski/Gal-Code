@@ -1,6 +1,10 @@
-.tech-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-card-title {
+  color: var(--clr1);
 }

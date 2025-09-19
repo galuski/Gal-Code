@@ -10,6 +10,7 @@ import { WorldMap } from './cmps/WorldMap'
 import { Services } from './cmps/Services'
 import { Contact } from './cmps/Contact'
 import { Skills } from './cmps/Skills'
+import { Footer } from './cmps/Footer'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Services />
       <Contact />
       <Skills />
+      <Footer />
       {/* <WorldMap /> */}
     </section>
   )

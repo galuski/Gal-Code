@@ -1,6 +1,5 @@
-import { TechCard } from "./TechCard";
-
-import { useTranslation } from "react-i18next";
+import { TechCard } from "./TechCard"
+import { useTranslation, Trans } from "react-i18next"
 
 import htmlSVG from "./../../public/logos/code/html.svg"
 import cssSVG from "./../../public/logos/code/css.svg"
@@ -12,10 +11,10 @@ import nodeSVG from "./../../public/logos/code/node.svg"
 import mongoSVG from "./../../public/logos/code/mongodb.svg"
 import npmSVG from "./../../public/logos/code/npm.svg"
 import sassSVG from "./../../public/logos/code/sass.svg"
-import { Title } from "./Title";
+import { Title } from "./Title"
 
 export function Skills() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation()
 
     const techs = [
         { name: "HTML", logo: htmlSVG },
@@ -32,13 +31,33 @@ export function Skills() {
 
     return (
         <section className="skills">
-            <div className="title-skills">
-                <Title title={t("Our Tech")} />
-            </div>
-            <div className="skills-cards-container">
-                {techs.map(({ name, logo }) => (
-                    <TechCard key={name} logo={logo} title={name} />
-                ))}
+            <div className="skills-container">
+
+                <div className="skills-cards-container">
+                    {techs.map(({ name, logo }) => (
+                        <TechCard key={name} logo={logo} title={name} />
+                    ))}
+                </div>
+
+                <div className="skills-txt">
+                    <Title title={t("skills.title")} />
+
+                    <p>
+                        <Trans i18nKey="skills.line1">
+                            Websites built from scratch with code using the <strong>best technology</strong>.
+                        </Trans>
+                    </p>
+                    <p>
+                        <Trans i18nKey="skills.line2">
+                            They are <strong>clean</strong>, <strong>fast</strong>, and <strong>fully customized</strong> for your business and your audience.
+                        </Trans>
+                    </p>
+                    <p>
+                        <Trans i18nKey="skills.line3">
+                            Now is the time to <strong>step out of the template</strong> and build a website that feels <strong>natural</strong>, <strong>unique</strong>, and truly yours.
+                        </Trans>
+                    </p>
+                </div>
             </div>
         </section>
     )
