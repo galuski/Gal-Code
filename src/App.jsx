@@ -11,6 +11,7 @@ import { Services } from './cmps/Services'
 import { Contact } from './cmps/Contact'
 import { Skills } from './cmps/Skills'
 import { Footer } from './cmps/Footer'
+import { Projects } from './cmps/Projects'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       {/* <Video /> */}
       <About />
       <Services />
+      <Projects />
       <Contact />
       <Skills />
       <Footer />

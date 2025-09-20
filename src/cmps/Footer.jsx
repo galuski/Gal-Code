@@ -10,10 +10,23 @@ export function Footer() {
     return (
         <footer className="footer-container">
             <ul className="social-media">
-                <li><img src={linkedinSVG} alt="linkedin" /></li>
-                <li><img src={instagramSVG} alt="instagram" /></li>
-                <li><img src={facebookSVG} alt="facebook" /></li>
+                <li>
+                    <a href="https://www.linkedin.com/in/galuski/" target="_blank" rel="noopener noreferrer">
+                        <img src={linkedinSVG} alt="linkedin" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/luskigal?igsh=Z3VycXhpanZiYmY1" target="_blank" rel="noopener noreferrer">
+                        <img src={instagramSVG} alt="instagram" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/luskigal" target="_blank" rel="noopener noreferrer">
+                        <img src={facebookSVG} alt="facebook" />
+                    </a>
+                </li>
             </ul>
+
             <ul className="footer-links">
                 <li><a href="">{t("Home")}</a></li>|
                 <li><a href="">{t("About")}</a></li>|
