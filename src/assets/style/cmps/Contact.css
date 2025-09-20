@@ -145,6 +145,10 @@ form .form-row .textarea {
   font-size: 0.6rem;
   color: red;
 }
+
+.contact-policy{
+  color: var(--clr2);
+}
 @media (max-width: 710px) {
   .form-container {
     display: grid;

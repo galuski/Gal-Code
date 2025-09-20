@@ -1,4 +1,8 @@
 import { useTranslation } from "react-i18next"
+import { Link } from "react-router-dom"
+
+import { WhatsApp } from "./WhatsApp"
+
 
 import linkedinSVG from "./../../public/icons/linkedin.svg"
 import instagramSVG from "./../../public/icons/instagram.svg"
@@ -28,12 +32,23 @@ export function Footer() {
             </ul>
 
             <ul className="footer-links">
-                <li><a href="">{t("Home")}</a></li>|
-                <li><a href="">{t("About")}</a></li>|
-                <li><a href="">{t("Projects")}</a></li>|
-                <li><a href="">{t("Contact me")}</a></li>
+                <li><a href="/#">{t("Home")}</a></li>|
+                <li><a href="/#about">{t("About me")}</a></li>|
+                <li><a href="/#projects">{t("Projects")}</a></li>|
+                <li><a href="/#contact">{t("Contact me")}</a></li>
             </ul>
+
+            <ul className="privacy-policy-acc">
+                <li>
+                    <Link to="/privacy">{t("Privacy Policy")}</Link>
+                </li>
+                <li>
+                    <Link to="/accessibility">{t("Accessibility Statement")}</Link>
+                </li>
+            </ul>
+
             <p className="footer-credit">{t("© 2025 All rights reserved | Designed & developed by Gal-Code")}</p>
+            <WhatsApp/>
         </footer>
     )
 }

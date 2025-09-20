@@ -13,9 +13,6 @@ export function Hero() {
 
   return (
     <section className="hero">
-      <header className="header-container">
-        <Navbar />
-      </header>
 
       <div className="hero-area">
         {/* ווידאו ברקע */}

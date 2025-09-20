@@ -8,7 +8,7 @@ export function Projects() {
     const { t } = useTranslation()
 
     return (
-        <section className="projects">
+        <section id="projects" className="projects">
             <div className="projects-title">
                 <Title title={t("Projects")} />
             </div>

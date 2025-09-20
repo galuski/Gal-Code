@@ -8,6 +8,10 @@
 @import 'base/layout.css';
 @import 'base/forms.css';
 
+/*Views*/
+@import 'views/PrivacyPolicy.css';
+
+
 /*Componetes*/
 @import 'cmps/Navbar.css';
 @import 'cmps/Hero.css';
@@ -28,3 +32,4 @@
 @import 'cmps/Skills.css';
 @import 'cmps/TechCard.css';
 @import 'cmps/Footer.css';
+@import 'cmps/WhatsApp.css';

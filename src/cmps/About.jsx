@@ -6,9 +6,9 @@ export function About() {
   const { t } = useTranslation();
 
   return (
-    <section className="about">
+    <section id="about" className="about">
       <div className="about-title">
-        <Title title={t("About")} />
+        <Title title={t("About me")} />
       </div>
       <div className="about-container">
         <div className="about-txt">

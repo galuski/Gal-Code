@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 import logoEN from './../../public/logos/logo.svg';
 import logoHE from './../../public/logos/logo.svg';
@@ -78,16 +79,16 @@ export function Navbar() {
       <a href="/"><img className="navbar-logo" src={logo} alt="logo" /></a>
 
       <ul className={menuOpen ? "open" : ""}>
-        <li><a href="">{t("Home")}</a></li>
-        <li><a href="">{t("About")}</a></li>
-        <li><a href="">{t("Projects")}</a></li>
-        <li><a href="">{t("Contact me")}</a></li>
+        <li><a href="/#">{t("Home")}</a></li>
+        <li><a href="/#about">{t("About me")}</a></li>
+        <li><a href="/#projects">{t("Projects")}</a></li>
+        <li><a href="/#contact">{t("Contact me")}</a></li>
       </ul>
 
       <div className="navbar-area-btns">
         {/* Dropdown */}
         <div className="dropdown">
-          <button onClick={toggleDropdown}>
+          <button className={selectedLanguage} onClick={toggleDropdown}>
             {getLanguageName(selectedLanguage)}
             <img src={selectedFlag} alt="flag" className="flag-icon" />
           </button>

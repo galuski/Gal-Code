@@ -2,18 +2,24 @@ html.he .navbar {
   direction: rtl;
   text-align: right;
   font-family: NotoSansHebrew;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }
 
 html.en .navbar {
   direction: ltr;
   text-align: left;
   font-family: Poppins;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }
 
 html.es .navbar {
   direction: ltr;
   text-align: left;
   font-family: Barlow;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }
 
 .navbar {
@@ -96,7 +102,7 @@ button:hover {
 }
 
 .flag-icon {
-  width: 24px;
+  width: 28px;
   height: 24px;
   padding: 2px;
   margin: 0;
@@ -116,7 +122,6 @@ button:hover {
 
 /* תפריט ניווט במסכים קטנים */
 @media (max-width: 960px) {
-
   .navbar .menu {
     display: flex;
     flex-direction: column;
@@ -138,18 +143,17 @@ button:hover {
     width: 30px;
     position: absolute;
   }
-  
+
   .menu.open #bar2 {
     opacity: 0;
   }
-  
+
   .menu.open #bar3 {
     transform: rotate(-45deg);
     transform-origin: center;
     width: 30px;
     position: absolute;
   }
-  
 
   .navbar ul {
     display: none;

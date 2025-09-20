@@ -4,8 +4,19 @@
 }
 
 .project-content {
-  place-items: center;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-type {
+  background-color: var(--clr2);
+  color: var(--clr4);
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: bold;
 }
 
 @media (max-width: 450px) {

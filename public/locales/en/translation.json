@@ -1,6 +1,6 @@
 {
   "Home": "Home",
-  "About": "About",
+  "About me": "About me",
   "Projects": "Projects",
   "Contact me": "Contact me",
 
@@ -46,8 +46,8 @@
   "Email address": "Email address",
   "Phone number": "Phone number",
   "Your message": "Your message",
-  "I have read and agree to the Terms and Conditions and Privacy Policy": "I have read and agree to the Terms and Conditions and Privacy Policy",
-  "Terms and Conditions & Privacy Policy": "Terms and Conditions & Privacy Policy",
+  "I agree to the": "I agree to the",
+  "terms and privacy": "terms and privacy",
   "Send Message": "Send Message",
   "Name is required": "Name is required",
   "Email is required": "Email is required",
@@ -68,5 +68,76 @@
     "line1": "Websites built from scratch with code using the <1>best technology</1>.",
     "line2": "They are <1>clean</1>, <3>fast</3>, and <5>fully customized</5> for your business and your audience.",
     "line3": "Now is the time to <1>step out of the template</1> and build a website that feels <3>natural</3>, <5>unique</5>, and truly yours."
+  },
+
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: September 21, 2025",
+    "whoWeAre": {
+      "title": "Who We Are",
+      "body": "The Gal-Code website (\"the Website\") respects your privacy and complies with Israeli law and international privacy regulations."
+    },
+    "whatWeCollect": {
+      "title": "Information We Collect",
+      "contactForm": "Contact form: name, phone, email, and message — sent directly to our email (luskigal@gmail.com) and not stored in any database.",
+      "cookies": "Cookies: used only to remember your language preference (Hebrew/English/Spanish)."
+    },
+    "howWeUse": {
+      "title": "How We Use Information",
+      "reply": "To respond to user inquiries.",
+      "languagePref": "To remember your language preference and improve user experience."
+    },
+    "sharing": {
+      "title": "Sharing with Third Parties",
+      "body": "We do not share personal data with third parties unless legally required."
+    },
+    "security": {
+      "title": "Data Security",
+      "body": "We apply reasonable security measures but cannot guarantee absolute protection."
+    },
+    "yourRights": {
+      "title": "Your Rights",
+      "access": "Request access to your information.",
+      "rectify": "Request correction of incorrect information.",
+      "erase": "Request deletion of data, subject to law.",
+      "cookies": "Manage or delete cookies through your browser settings."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "body": "For any questions or requests regarding this policy, please contact us by email.",
+      "emailLink": "Email us"
+    }
+  },
+  "access": {
+    "title": "Accessibility Statement",
+    "lastUpdated": "Last updated: September 21, 2025",
+    "commitment": {
+      "title": "Our Commitment",
+      "body": "Gal-Code is committed to making this website accessible to all users, in line with Israeli law and WCAG 2.1 AA."
+    },
+    "scope": {
+      "title": "Accessibility on This Site",
+      "languages": "Support for three languages: Hebrew, English, Spanish.",
+      "dir": "RTL support for Hebrew and LTR for English/Spanish.",
+      "responsive": "Responsive for desktop and mobile browsing.",
+      "contrast": "Sufficient color contrast.",
+      "alts": "Alternative text for all meaningful images.",
+      "keyboard": "Keyboard navigation with visible focus.",
+      "forms": "Forms accessible with screen readers, with labels and clear error messages."
+    },
+    "standards": {
+      "title": "Standards",
+      "body": "This site was developed in line with WCAG 2.1 AA. Some content may still be undergoing improvements."
+    },
+    "feedback": {
+      "title": "Accessibility Feedback",
+      "body": "If you encounter an accessibility issue, please contact us and we will address it promptly.",
+      "emailLink": "Report an accessibility issue"
+    },
+    "enforcement": {
+      "title": "Enforcement",
+      "body": "In Israel, enforcement is carried out under the Equal Rights for Persons with Disabilities Law."
+    }
   }
+
 }

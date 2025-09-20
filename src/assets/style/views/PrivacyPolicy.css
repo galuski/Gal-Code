@@ -1,0 +1,97 @@
+/* סגנון כללי לעמודי מדיניות ונגישות */
+.container.policy,
+.container.accessibility {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* התאמות לשפות שונות */
+.container.policy[dir="rtl"],
+.container.accessibility[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+.container.policy[dir="ltr"],
+.container.accessibility[dir="ltr"] {
+  text-align: left;
+  direction: ltr;
+}
+
+/* כותרות */
+.container.policy h1,
+.container.accessibility h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--clr1, #0b3b5d);
+  border-bottom: 2px solid var(--clr2, #338d8c);
+  padding-bottom: 0.5rem;
+}
+
+.container.policy h2,
+.container.accessibility h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--clr2, #338d8c);
+}
+
+/* טקסט ופסקאות */
+.container.policy p,
+.container.accessibility p {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.container.policy ul,
+.container.accessibility ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.container.policy li,
+.container.accessibility li {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* קישורים */
+.container.policy a,
+.container.accessibility a {
+  color: var(--clr2, #338d8c);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.container.policy a:hover,
+.container.accessibility a:hover {
+  color: var(--clr1, #0b3b5d);
+  text-decoration: none;
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+  .container.policy,
+  .container.accessibility {
+    padding: 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .container.policy h1,
+  .container.accessibility h1 {
+    font-size: 1.6rem;
+  }
+
+  .container.policy h2,
+  .container.accessibility h2 {
+    font-size: 1.2rem;
+  }
+}

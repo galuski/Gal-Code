@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
 import { Title } from "../cmps/Title";
@@ -105,7 +106,7 @@ export function Contact() {
       )}
 
       <div className="contact-title">
-        <Title title={t("Contact us")} />
+        <Title title={t("Contact me")} />
       </div>
 
       <form className="form-container" ref={form} onSubmit={sendEmail}>
@@ -154,11 +155,11 @@ export function Contact() {
             <div>
 
               {t(
-                "I have read and agree to the Terms and Conditions and Privacy Policy"
+                "I agree to the"
               )}{" "}
-              <a href="/terms" target="_blank">
-                {t("Terms and Conditions & Privacy Policy")}
-              </a>
+              <Link className="contact-policy" to="/privacy">
+                {t("terms and privacy")}
+              </Link>
             </div>
           </label>
           {errors.terms && <span className="error">{errors.terms}</span>}
