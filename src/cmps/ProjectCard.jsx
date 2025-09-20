@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 
-import Edeng_jewellery from "./../../public/photos/projects/edeng_jewellry.svg"
+import Edeng_jewellery from "./../../public/photos/projects/edeng_jewellry.png"
 export function ProjectCard() {
     const { t } = useTranslation()
 
