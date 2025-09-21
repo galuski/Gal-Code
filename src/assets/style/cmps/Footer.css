@@ -30,3 +30,12 @@
 .footer-credit {
   text-align: center;
 }
+
+@media (max-width: 450px) {
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+}
