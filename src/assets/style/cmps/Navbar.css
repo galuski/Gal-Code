@@ -29,6 +29,8 @@ html.es .navbar {
   direction: ltr;
   text-align: left;
   font-family: Barlow;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
   background-color: var(--clr4);
 }
 
