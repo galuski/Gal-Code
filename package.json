@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "animate.css": "^4.1.1",
     "framer-motion": "^12.23.12",
     "i18next": "^24.2.2",
     "i18next-browser-languagedetector": "^8.0.2",

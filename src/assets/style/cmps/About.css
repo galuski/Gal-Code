@@ -4,6 +4,11 @@
   align-items: center;
   margin-bottom: 50px;
 }
+.about-title{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
 
 .about-txt {
   max-width: 600px; /* לא לעבור על כל המסך */
@@ -24,8 +29,9 @@
     align-items: center;
   }
   .about-title {
-    display: grid;
-    place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
   .about-txt {
     text-align: center;

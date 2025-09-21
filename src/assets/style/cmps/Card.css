@@ -1,6 +1,6 @@
 .card {
   width: 280px;
-  background: #f5f5f5;
+  background: var(--clr4);
   color: var(--clr2);
   border-radius: 10px;
   padding: 50px 30px;
@@ -55,7 +55,7 @@
 .number .text {
   font-size: 28px;
   font-weight: 600;
-  color: white;
+  color: var(--clr4);
   position: relative;
   z-index: 5;     /* לוודא שהוא לא נבלע */
 }
@@ -91,6 +91,6 @@
 .card:hover .icon-wrapper,
 .card:hover .card-title,
 .card:hover .card-description {
-  color: #f5f5f5;
-  fill: #f5f5f5;
+  color: var(--clr4);
+  fill: var(--clr4);
 }

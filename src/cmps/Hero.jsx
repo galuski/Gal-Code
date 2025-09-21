@@ -4,6 +4,9 @@ import { Navbar } from "./Navbar";
 import codingMP4 from "./../../public/videos/coding.mp4";
 import { Button } from "./Button";
 
+import 'animate.css';
+
+
 export function Hero() {
   const { t, i18n } = useTranslation();
   const text = t("Building websites using code");

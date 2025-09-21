@@ -4,6 +4,7 @@ html.he .navbar {
   font-family: NotoSansHebrew;
   padding-left: 1.6rem;
   padding-right: 1.6rem;
+  background-color: var(--clr4);
 }
 
 html.en .navbar {
@@ -12,6 +13,7 @@ html.en .navbar {
   font-family: Poppins;
   padding-left: 1.6rem;
   padding-right: 1.6rem;
+  background-color: var(--clr4);
 }
 
 html.es .navbar {
@@ -20,6 +22,7 @@ html.es .navbar {
   font-family: Barlow;
   padding-left: 1.6rem;
   padding-right: 1.6rem;
+  background-color: var(--clr4);
 }
 
 .navbar {

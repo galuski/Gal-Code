@@ -136,3 +136,7 @@ a.active {
 strong {
   color: var(--clr1);
 }
+
+#root {
+  background-color: var(--clr4);
+}
