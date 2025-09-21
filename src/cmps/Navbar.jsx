@@ -48,33 +48,16 @@ export function Navbar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const handleChangeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
+    i18n.changeLanguage(lang).then(() => {
+      if (Cookies.get("cookie-consent") === "accepted") {
+        Cookies.set("preferred-language", lang, { expires: 365 });
+      }
+    });
     setIsOpen(false);
-
-    if (Cookies.get("cookie-consent") === "accepted") {
-      Cookies.set("preferred-language", lang, { expires: 365 });
-    }
   };
 
-  useEffect(() => {
-    const consent = Cookies.get("cookie-consent");
-    const savedLang = Cookies.get("preferred-language");
-
-    let langToUse = "en";
-    if (consent === "accepted" && savedLang) {
-      langToUse = savedLang;
-    }
-
-    i18n.changeLanguage(langToUse);
-
-    document.documentElement.lang = langToUse;
-    document.documentElement.dir = langToUse === "he" ? "rtl" : "ltr";
-    document.documentElement.className = "";
-    document.documentElement.classList.add(langToUse);
-  }, []);
-
-  // השפה הנוכחית תמיד מ־i18n
-  const currentLang = i18n.language;
+  // השפה הנוכחית תמיד מ-i18n
+  const currentLang = i18n.language || "en";
   const currentFlag = getFlag(currentLang);
   const currentLogo = getLogo(currentLang);
 
