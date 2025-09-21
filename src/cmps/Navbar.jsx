@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Cookies from "js-cookie";
 
-import logoEN from './../../public/logos/logo.svg';
-import logoHE from './../../public/logos/logo.svg';
-import logoES from './../../public/logos/logo.svg';
+import logoEN from "./../../public/logos/logo.svg";
+import logoHE from "./../../public/logos/logo.svg";
+import logoES from "./../../public/logos/logo.svg";
 
-import israelFlag from './../../public/flags/israel.png';
-import usaFlag from './../../public/flags/usa.png';
-import spainFlag from './../../public/flags/spain.png';
+import israelFlag from "./../../public/flags/israel.png";
+import usaFlag from "./../../public/flags/usa.png";
+import spainFlag from "./../../public/flags/spain.png";
 
 export function Navbar() {
   const { t, i18n } = useTranslation();
@@ -61,6 +61,20 @@ export function Navbar() {
   const currentFlag = getFlag(currentLang);
   const currentLogo = getLogo(currentLang);
 
+  // ✅ אפקט שמעדכן את <html> בכל שינוי שפה
+  useEffect(() => {
+    const lang = i18n.language || "en";
+    const dir = lang === "he" ? "rtl" : "ltr";
+
+    document.documentElement.setAttribute("lang", lang);
+    document.documentElement.setAttribute("dir", dir);
+
+    // הסרת קלאסים ישנים
+    document.documentElement.classList.remove("en", "he", "es");
+    // הוספת הקלאס הנוכחי
+    document.documentElement.classList.add(lang);
+  }, [i18n.language]);
+
   return (
     <nav className="navbar">
       <div className={`menu ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
@@ -69,7 +83,9 @@ export function Navbar() {
         <div className="bars" id="bar3" />
       </div>
 
-      <a href="/"><img className="navbar-logo" src={currentLogo} alt="logo" /></a>
+      <a href="/">
+        <img className="navbar-logo" src={currentLogo} alt="logo" />
+      </a>
 
       <ul className={menuOpen ? "open" : ""}>
         <li><a href="/#">{t("Home")}</a></li>
@@ -95,7 +111,11 @@ export function Navbar() {
                     onClick={() => handleChangeLanguage(lang)}
                   >
                     {getLanguageName(lang)}
-                    <img src={getFlag(lang)} alt={`${lang} Flag`} className="flag-icon" />
+                    <img
+                      src={getFlag(lang)}
+                      alt={`${lang} Flag`}
+                      className="flag-icon"
+                    />
                   </div>
                 ))}
             </div>
