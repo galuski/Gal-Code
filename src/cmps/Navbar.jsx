@@ -58,7 +58,7 @@ export function Navbar() {
     setLogo(getLogo(lang));
     setIsOpen(false);
 
-        // שמירה בקוקי רק אם המשתמש הסכים
+    // שמירה בקוקי רק אם המשתמש הסכים
     if (Cookies.get("cookie-consent") === "accepted") {
       Cookies.set("preferred-language", lang, { expires: 365 });
     }
@@ -86,7 +86,15 @@ export function Navbar() {
     document.documentElement.classList.add(langToUse);
   }, []);
 
-  
+  useEffect(() => {
+    // מסתנכרן כל פעם שהשפה משתנה ב-i18n
+    const currentLang = i18n.language;
+    setSelectedLanguage(currentLang);
+    setSelectedFlag(getFlag(currentLang));
+    setLogo(getLogo(currentLang));
+  }, [i18n.language]);
+
+
   return (
     <nav className="navbar">
       <div className={`menu ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
