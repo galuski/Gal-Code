@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
 
 import logoEN from './../../public/logos/logo.svg';
@@ -15,10 +14,7 @@ export function Navbar() {
   const { t, i18n } = useTranslation();
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); // dropdown
-  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
-  const [selectedFlag, setSelectedFlag] = useState(getFlag(i18n.language));
-  const [logo, setLogo] = useState(getLogo(i18n.language));
+  const [isOpen, setIsOpen] = useState(false);
 
   // פונקציות עזר
   function getFlag(lang) {
@@ -52,50 +48,35 @@ export function Navbar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const handleChangeLanguage = (lang) => {
-    i18n.changeLanguage(lang).then(() => {
-      setSelectedLanguage(lang);
-      setSelectedFlag(getFlag(lang));
-      setLogo(getLogo(lang));
-    });
+    i18n.changeLanguage(lang);
     setIsOpen(false);
 
-    // שמירה בקוקי רק אם המשתמש הסכים
     if (Cookies.get("cookie-consent") === "accepted") {
       Cookies.set("preferred-language", lang, { expires: 365 });
     }
   };
 
   useEffect(() => {
-    // בדיקת קוקי אם המשתמש הסכים
     const consent = Cookies.get("cookie-consent");
     const savedLang = Cookies.get("preferred-language");
 
-    let langToUse = "en"; // ברירת מחדל
-
+    let langToUse = "en";
     if (consent === "accepted" && savedLang) {
       langToUse = savedLang;
     }
 
-    // מחכים שהשפה באמת תיטען לפני עדכון הסטייט
-    i18n.changeLanguage(langToUse).then(() => {
-      setSelectedLanguage(langToUse);
-      setSelectedFlag(getFlag(langToUse));
-      setLogo(getLogo(langToUse));
+    i18n.changeLanguage(langToUse);
 
-      document.documentElement.lang = langToUse;
-      document.documentElement.dir = langToUse === "he" ? "rtl" : "ltr";
-      document.documentElement.className = "";
-      document.documentElement.classList.add(langToUse);
-    });
+    document.documentElement.lang = langToUse;
+    document.documentElement.dir = langToUse === "he" ? "rtl" : "ltr";
+    document.documentElement.className = "";
+    document.documentElement.classList.add(langToUse);
   }, []);
 
-  useEffect(() => {
-    // מסתנכרן כל פעם שהשפה משתנה ב-i18n
-    const currentLang = i18n.language;
-    setSelectedLanguage(currentLang);
-    setSelectedFlag(getFlag(currentLang));
-    setLogo(getLogo(currentLang));
-  }, [i18n.language]);
+  // השפה הנוכחית תמיד מ־i18n
+  const currentLang = i18n.language;
+  const currentFlag = getFlag(currentLang);
+  const currentLogo = getLogo(currentLang);
 
   return (
     <nav className="navbar">
@@ -105,7 +86,7 @@ export function Navbar() {
         <div className="bars" id="bar3" />
       </div>
 
-      <a href="/"><img className="navbar-logo" src={logo} alt="logo" /></a>
+      <a href="/"><img className="navbar-logo" src={currentLogo} alt="logo" /></a>
 
       <ul className={menuOpen ? "open" : ""}>
         <li><a href="/#">{t("Home")}</a></li>
@@ -115,16 +96,15 @@ export function Navbar() {
       </ul>
 
       <div className="navbar-area-btns">
-        {/* Dropdown */}
         <div className="dropdown">
-          <button className={selectedLanguage} onClick={toggleDropdown}>
-            {getLanguageName(selectedLanguage)}
-            <img src={selectedFlag} alt="flag" className="flag-icon" />
+          <button className={currentLang} onClick={toggleDropdown}>
+            {getLanguageName(currentLang)}
+            <img src={currentFlag} alt="flag" className="flag-icon" />
           </button>
           {isOpen && (
             <div className="dropdown-menu">
               {["he", "en", "es"]
-                .filter((lang) => lang !== selectedLanguage) // לא להציג את השפה הנוכחית
+                .filter((lang) => lang !== currentLang)
                 .map((lang) => (
                   <div
                     key={lang}
