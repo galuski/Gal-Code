@@ -1,4 +1,7 @@
 html.he .navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
   direction: rtl;
   text-align: right;
   font-family: NotoSansHebrew;
@@ -8,6 +11,9 @@ html.he .navbar {
 }
 
 html.en .navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
   direction: ltr;
   text-align: left;
   font-family: Poppins;
@@ -17,11 +23,12 @@ html.en .navbar {
 }
 
 html.es .navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
   direction: ltr;
   text-align: left;
   font-family: Barlow;
-  padding-left: 1.6rem;
-  padding-right: 1.6rem;
   background-color: var(--clr4);
 }
 
@@ -167,14 +174,20 @@ button:hover {
 
   .navbar ul.open {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
     position: absolute;
-    top: 85px;
+    top: 100%; /* ישר מתחת ל-navbar */
+    left: 0;
+    right: 0; /* תופס את כל הרוחב */
     width: 100%;
     gap: 10px;
     background-color: var(--clr2);
     color: white;
-    z-index: 50;
+    z-index: 999;
+    padding: 0; /* מבטל את הפדינג */
+    margin: 0; /* לוודא שאין מרווח */
   }
 }
