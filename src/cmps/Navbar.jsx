@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
 
 import logoEN from './../../public/logos/logo.svg';
 import logoHE from './../../public/logos/logo.svg';
@@ -15,7 +16,7 @@ export function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false); // dropdown
-  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
+  const [selectedLanguage, setSelectedLanguage] = useState("en");
   const [selectedFlag, setSelectedFlag] = useState(getFlag(i18n.language));
   const [logo, setLogo] = useState(getLogo(i18n.language)); // לוגו דינמי
 
@@ -25,7 +26,7 @@ export function Navbar() {
       case 'he': return israelFlag;
       case 'en': return usaFlag;
       case 'es': return spainFlag;
-      default: return '';
+      default: return usaFlag;
     }
   }
 
@@ -56,18 +57,36 @@ export function Navbar() {
     setSelectedFlag(getFlag(lang));
     setLogo(getLogo(lang));
     setIsOpen(false);
+
+        // שמירה בקוקי רק אם המשתמש הסכים
+    if (Cookies.get("cookie-consent") === "accepted") {
+      Cookies.set("preferred-language", lang, { expires: 365 });
+    }
   };
 
   useEffect(() => {
-    document.documentElement.lang = i18n.language;
-    document.documentElement.dir = i18n.language === "he" ? "rtl" : "ltr";
+    // בדיקת קוקי אם המשתמש הסכים
+    const consent = Cookies.get("cookie-consent");
+    const savedLang = Cookies.get("preferred-language");
 
-    document.documentElement.className = ""; // איפוס מחלקות
-    document.documentElement.classList.add(i18n.language);
+    let langToUse = "en"; // ברירת מחדל
 
-    setLogo(getLogo(i18n.language));
-  }, [i18n.language]);
+    if (consent === "accepted" && savedLang) {
+      langToUse = savedLang;
+    }
 
+    i18n.changeLanguage(langToUse);
+    setSelectedLanguage(langToUse);
+    setSelectedFlag(getFlag(langToUse));
+    setLogo(getLogo(langToUse));
+
+    document.documentElement.lang = langToUse;
+    document.documentElement.dir = langToUse === "he" ? "rtl" : "ltr";
+    document.documentElement.className = "";
+    document.documentElement.classList.add(langToUse);
+  }, []);
+
+  
   return (
     <nav className="navbar">
       <div className={`menu ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>

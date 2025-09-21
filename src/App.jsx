@@ -7,6 +7,9 @@ import { Contact } from './cmps/Contact'
 import { Skills } from './cmps/Skills'
 import { Footer } from './cmps/Footer'
 import { Projects } from './cmps/Projects'
+import { WhatsApp } from "./cmps/WhatsApp"
+import { CookieConsent } from './cmps/CookieConsent'
+
 
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import AccessibilityStatement from './pages/AccessibilityStatement'
@@ -41,6 +44,8 @@ function App() {
         <Route path="/accessibility" element={<AccessibilityStatement />} />
       </Routes>
       <Footer />
+      <WhatsApp />
+      <CookieConsent />
     </Router>
   )
 }

@@ -1,9 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"
 
-import { WhatsApp } from "./WhatsApp"
-
-
 import linkedinSVG from "./../../public/icons/linkedin.svg"
 import instagramSVG from "./../../public/icons/instagram.svg"
 import facebookSVG from "./../../public/icons/facebook.svg"
@@ -48,7 +45,6 @@ export function Footer() {
             </ul>
 
             <p className="footer-credit">{t("© 2025 All rights reserved | Designed & developed by Gal-Code")}</p>
-            <WhatsApp/>
         </footer>
     )
 }
