@@ -12,14 +12,17 @@ import usaFlag from './../../public/flags/usa.png';
 import spainFlag from './../../public/flags/spain.png';
 
 export function Navbar() {
-  const { t, i18n } = useTranslation();
+  const { t, i18n, ready } = useTranslation();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false); // dropdown
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
   const [selectedFlag, setSelectedFlag] = useState(getFlag(i18n.language));
   const [logo, setLogo] = useState(getLogo(i18n.language));
-
+  
+  if (!ready) {
+    return null; // או תשים פה <div>טוען...</div> אם אתה רוצה
+  }
   // פונקציות עזר
   function getFlag(lang) {
     switch (lang) {
