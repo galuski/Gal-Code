@@ -188,6 +188,6 @@ button:hover {
     color: white;
     z-index: 999;
     padding: 0; /* מבטל את הפדינג */
-    margin: 0; /* לוודא שאין מרווח */
+    margin: 0;
   }
 }
