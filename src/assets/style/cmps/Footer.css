@@ -29,6 +29,7 @@
 
 .footer-credit {
   text-align: center;
+  color: var(--clr1);
 }
 
 @media (max-width: 450px) {
@@ -37,5 +38,14 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .privacy-policy-acc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
