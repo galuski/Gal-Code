@@ -12,42 +12,39 @@ import usaFlag from './../../public/flags/usa.png';
 import spainFlag from './../../public/flags/spain.png';
 
 export function Navbar() {
-  const { t, i18n, ready } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false); // dropdown
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
   const [selectedFlag, setSelectedFlag] = useState(getFlag(i18n.language));
   const [logo, setLogo] = useState(getLogo(i18n.language));
-  
-  if (!ready) {
-    return null; // או תשים פה <div>טוען...</div> אם אתה רוצה
-  }
+
   // פונקציות עזר
   function getFlag(lang) {
     switch (lang) {
-      case 'he': return israelFlag;
-      case 'en': return usaFlag;
-      case 'es': return spainFlag;
+      case "he": return israelFlag;
+      case "en": return usaFlag;
+      case "es": return spainFlag;
       default: return usaFlag;
     }
   }
 
   function getLogo(lang) {
     switch (lang) {
-      case 'he': return logoHE;
-      case 'en': return logoEN;
-      case 'es': return logoES;
+      case "he": return logoHE;
+      case "en": return logoEN;
+      case "es": return logoES;
       default: return logoEN;
     }
   }
 
   function getLanguageName(lang) {
     switch (lang) {
-      case 'he': return 'עב';
-      case 'en': return 'En';
-      case 'es': return 'Es';
-      default: return 'Language';
+      case "he": return "עב";
+      case "en": return "En";
+      case "es": return "Es";
+      default: return "Language";
     }
   }
 
@@ -55,10 +52,11 @@ export function Navbar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const handleChangeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-    setSelectedLanguage(lang);
-    setSelectedFlag(getFlag(lang));
-    setLogo(getLogo(lang));
+    i18n.changeLanguage(lang).then(() => {
+      setSelectedLanguage(lang);
+      setSelectedFlag(getFlag(lang));
+      setLogo(getLogo(lang));
+    });
     setIsOpen(false);
 
     // שמירה בקוקי רק אם המשתמש הסכים
@@ -78,15 +76,17 @@ export function Navbar() {
       langToUse = savedLang;
     }
 
-    i18n.changeLanguage(langToUse);
-    setSelectedLanguage(langToUse);
-    setSelectedFlag(getFlag(langToUse));
-    setLogo(getLogo(langToUse));
+    // מחכים שהשפה באמת תיטען לפני עדכון הסטייט
+    i18n.changeLanguage(langToUse).then(() => {
+      setSelectedLanguage(langToUse);
+      setSelectedFlag(getFlag(langToUse));
+      setLogo(getLogo(langToUse));
 
-    document.documentElement.lang = langToUse;
-    document.documentElement.dir = langToUse === "he" ? "rtl" : "ltr";
-    document.documentElement.className = "";
-    document.documentElement.classList.add(langToUse);
+      document.documentElement.lang = langToUse;
+      document.documentElement.dir = langToUse === "he" ? "rtl" : "ltr";
+      document.documentElement.className = "";
+      document.documentElement.classList.add(langToUse);
+    });
   }, []);
 
   useEffect(() => {
@@ -96,7 +96,6 @@ export function Navbar() {
     setSelectedFlag(getFlag(currentLang));
     setLogo(getLogo(currentLang));
   }, [i18n.language]);
-
 
   return (
     <nav className="navbar">
@@ -124,9 +123,9 @@ export function Navbar() {
           </button>
           {isOpen && (
             <div className="dropdown-menu">
-              {['he', 'en', 'es']
-                .filter(lang => lang !== selectedLanguage) // לא להציג את השפה הנוכחית
-                .map(lang => (
+              {["he", "en", "es"]
+                .filter((lang) => lang !== selectedLanguage) // לא להציג את השפה הנוכחית
+                .map((lang) => (
                   <div
                     key={lang}
                     className="dropdown-option"
@@ -135,8 +134,7 @@ export function Navbar() {
                     {getLanguageName(lang)}
                     <img src={getFlag(lang)} alt={`${lang} Flag`} className="flag-icon" />
                   </div>
-                ))
-              }
+                ))}
             </div>
           )}
         </div>
