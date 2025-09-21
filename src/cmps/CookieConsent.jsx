@@ -10,7 +10,7 @@ export function CookieConsent() {
     const consent = localStorage.getItem("cookie-consent");
     if (!consent) {
       const timer = setTimeout(() => {
-        setIsVisible(true); // הצג אחרי 8 שניות
+        setIsVisible(true);
       }, 4000);
       return () => clearTimeout(timer);
     }

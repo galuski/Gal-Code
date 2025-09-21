@@ -1,7 +1,8 @@
 .cookie-consent {
   width: 320px;
   max-width: 90%; /* מתאים למסכים קטנים */
-  background-color: #fff;
+  background-color: var(--clr4);
+  color: var(--clr1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,21 +61,21 @@
 }
 
 .acceptButton {
-  background-color: #D25124;
-  color: #fff;
+  background-color: var(--clr2);
+  color: var(--clr4);
 }
 
 .acceptButton:hover {
-  background-color: #E35B32;
+  background-color: var(--clr4);
 }
 
 .declineButton {
-  background-color: #dadada;
+  background-color: var(--clr4);
   color: #2e2e2e;
 }
 
 .declineButton:hover {
-  background-color: #ebebeb;
+  background-color: var(--clr4);
 }
 
 /* --- רספונסיבי למובייל --- */
