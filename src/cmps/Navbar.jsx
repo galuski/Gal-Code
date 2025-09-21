@@ -16,7 +16,7 @@ export function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false); // dropdown
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const [selectedLanguage, setSelectedLanguage] = useState(getFlag(i18n.language));
   const [selectedFlag, setSelectedFlag] = useState(getFlag(i18n.language));
   const [logo, setLogo] = useState(getLogo(i18n.language)); // לוגו דינמי
 
