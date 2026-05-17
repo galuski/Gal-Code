@@ -7,7 +7,7 @@ export function ProjectCard() {
     return (
         <div className="project-card">
             <a
-                href="https://edengjewellry.com/"
+                href="https://edengjewellery.com/"
                 target="_blank"
                 rel="noopener noreferrer"
             >
